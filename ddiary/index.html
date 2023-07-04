@@ -11,10 +11,76 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-        <!--Custom CSS for dream diaries-->
-        <link href="/css/ddiary.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="/css/styles.css" rel="stylesheet" />
+        <!-- Custom CSS for glitch effect-->
+        <style>
+            body{ 
+  display: flex;
+  margin: 0;
+  font-size: 96px;
+  letter-spacing: -7px;
+}
+
+div{
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+div:before,
+div:after{
+  content: attr(glitchtext);
+  position: absolute;
+  left: 0;
+}
+
+div:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+div:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+        </style>
     </head>
 <!--
 ==================================================================
@@ -53,15 +119,13 @@
             </div>
         </nav>
         <!-- Page content-->
-
-
-                <div class="glitch-wrapper">
-                    <div class="glitch" data-glitch="Dream Diary">Dream Diary</div>
-                </div>
+        <div class="container">
+            <div class="mt-5">
+                <div glitchtext="Dream Diary"><h1>Dream Diary</h1></div>
                 <p style="color:#474747;">you found the link, now access my dreams</p>
 				</span>
-
-
+            </div>
+        </div>
         <!-- Bootstrap core JS-->
         <script src="/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
