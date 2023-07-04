@@ -16,56 +16,34 @@
         <!-- Custom CSS for glitch effect-->
         <style>
             .stack {
-  display: grid;
-  grid-template-columns: 1fr;
-}
+                display: grid;
+                grid-template-columns: 1fr;
+            }
 
-.stack span {
-  font-weight: bold;
-  grid-row-start: 1;
-  grid-column-start: 1;
-  font-size: 4rem;
-  --stack-height: calc(100% / var(--stacks) - 1px);
-  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
-  --clip-top: calc(var(--stack-height) * var(--index));
-  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
-  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-  animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
-}
+            .stack span {
+                font-weight: bold;
+                grid-row-start: 1;
+                grid-column-start: 1;
+                font-size: 4rem;
+                --stack-height: calc(100% / var(--stacks) - 1px);
+                --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+                --clip-top: calc(var(--stack-height) * var(--index));
+                --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+                clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+                animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
+            }
 
-.stack span:nth-child(odd) { --glitch-translate: 8px; }
-.stack span:nth-child(even) { --glitch-translate: -8px; }
+            .stack span:nth-child(odd) { --glitch-translate: 8px; }
+            .stack span:nth-child(even) { --glitch-translate: -8px; }
 
-@keyframes stack {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%);
-    text-shadow: -2px 3px 0 white, 2px -3px 0 white;
-  };
-  60% {
-    opacity: 0.5;
-    transform: translateX(50%);
-  }
-  80% {
-    transform: none;
-    opacity: 1;
-    text-shadow: 2px -3px 0 white, -2px 3px 0 white;
-  }
-  100% {
-    text-shadow: none;
-  }
-}
-
-@keyframes glitch {
-  0% {
-    text-shadow: -2px 3px 0 white, 2px -3px 0 white;
-    transform: translate(var(--glitch-translate));
-  }
-  2% {
-    text-shadow: 2px -3px 0 white, -2px 3px 0 white;
-  }
-  4%, 100% {  text-shadow: none; transform: none; }
-}
+            @keyframes glitch {
+            0% {
+                text-shadow: -2px 3px 0 white, 2px -3px 0 white;
+                transform: translate(var(--glitch-translate));
+            }
+            2% {text-shadow: 2px -3px 0 white, -2px 3px 0 white;}
+            4%, 100% {  text-shadow: none; transform: none; }
+            }
         </style>
     </head>
 <!--
@@ -108,12 +86,13 @@
         <div class="container">
             <div class="mt-5">
                 <div class="stack" style="--stacks: 3;">
-                    <span style="--index: 0;"><h1>Dream Diary</h1></span>
-                    <span style="--index: 1;"><h1>Dream Diary</h1></span>
-                    <span style="--index: 2;"><h1>Dream Diary</h1></span>
+                    <span style="--index: 0;"><h2>Dream Diary</h2></span>
+                    <span style="--index: 1;"><h2>Dream Diary</h2></span>
+                    <span style="--index: 2;"><h2>Dream Diary</h2></span>
                 </div>
                 <p style="color:#474747;">you found a way in, enjoy my dreams</p>
 				</span>
+                    <p><a href="/dreams/year_zero/the_beach.html">the beach</a></p>
             </div>
         </div>
         <!-- Bootstrap core JS-->
