@@ -15,71 +15,6 @@
         <link href="/css/styles.css" rel="stylesheet" />
         <!-- Custom CSS for glitch effect-->
         <style>
-            body{ 
-  display: flex;
-  margin: 0;
-  font-size: 96px;
-  letter-spacing: -7px;
-}
-
-.glitchdiv{
-  animation: glitch 1s linear infinite;
-}
-
-@keyframes glitch{
-  2%,64%{
-    transform: translate(2px,0) skew(0deg);
-  }
-  4%,60%{
-    transform: translate(-2px,0) skew(0deg);
-  }
-  62%{
-    transform: translate(0,0) skew(5deg); 
-  }
-}
-
-.glitchdiv:before,
-.glitchdiv:after{
-  content: attr(glitchtext);
-  position: absolute;
-  left: 0;
-}
-
-.glitchdiv:before{
-  animation: glitchTop 1s linear infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
-
-@keyframes glitchTop{
-  2%,64%{
-    transform: translate(2px,-2px);
-  }
-  4%,60%{
-    transform: translate(-2px,2px);
-  }
-  62%{
-    transform: translate(13px,-1px) skew(-13deg); 
-  }
-}
-
-.glitchdiv:after{
-  animation: glitchBotom 1.5s linear infinite;
-  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-
-@keyframes glitchBotom{
-  2%,64%{
-    transform: translate(-2px,0);
-  }
-  4%,60%{
-    transform: translate(-2px,0);
-  }
-  62%{
-    transform: translate(-22px,5px) skew(21deg); 
-  }
-}
         </style>
     </head>
 <!--
@@ -121,7 +56,7 @@
         <!-- Page content-->
         <div class="container">
             <div class="mt-5">
-                <div class="glitchdiv" glitchtext="Dream Diary"><h1>Dream Diary</h1></div>
+                <h1>Dream Diary</h1>
                 <p style="color:#474747;">you found the link, now access my dreams</p>
 				</span>
             </div>
