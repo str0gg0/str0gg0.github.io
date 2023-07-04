@@ -22,7 +22,7 @@
   letter-spacing: -7px;
 }
 
-div{
+.glitchdiv{
   animation: glitch 1s linear infinite;
 }
 
@@ -38,14 +38,14 @@ div{
   }
 }
 
-div:before,
-div:after{
+.glitchdiv:before,
+.glitchdiv:after{
   content: attr(glitchtext);
   position: absolute;
   left: 0;
 }
 
-div:before{
+.glitchdiv:before{
   animation: glitchTop 1s linear infinite;
   clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
@@ -63,7 +63,7 @@ div:before{
   }
 }
 
-div:after{
+.glitchdiv:after{
   animation: glitchBotom 1.5s linear infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
@@ -121,7 +121,7 @@ div:after{
         <!-- Page content-->
         <div class="container">
             <div class="mt-5">
-                <div glitchtext="Dream Diary"><h1>Dream Diary</h1></div>
+                <div class="glitchdiv" glitchtext="Dream Diary"><h1>Dream Diary</h1></div>
                 <p style="color:#474747;">you found the link, now access my dreams</p>
 				</span>
             </div>
