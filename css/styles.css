@@ -11307,6 +11307,9 @@ ul.articles{
   padding: none;
   color: #ffffff;
  }
+ ul.articles a {
+  font-weight: bold;
+ }
  ul.articles a:hover {
   color: #ffffff8c;
  }
