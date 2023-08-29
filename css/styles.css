@@ -17,6 +17,9 @@
   font-size: 0.8rem;
   font-family: var(--bs-font-monospace);
  }
+ article{
+  list-style-type: none;
+ }
  .article a {
   text-decoration: none;
   padding: none;
