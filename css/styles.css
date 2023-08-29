@@ -11295,7 +11295,7 @@ textarea.form-control-lg {
 
  /* Violet's Custom Stuff: */
  .date {
-  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 0.8rem;
   font-family: var(--bs-font-monospace);
  }
