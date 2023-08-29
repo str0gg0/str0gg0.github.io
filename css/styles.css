@@ -11298,14 +11298,14 @@ textarea.form-control-lg {
   font-size: 0.8rem;
   font-family: var(--bs-font-monospace);
  }
- article{
+ul.articles{
   list-style-type: none;
- }
- .article a {
+}
+ ul.articles a {
   text-decoration: none;
   padding: none;
   color: #ffffff;
  }
- .article a:hover {
+ ul.articles a:hover {
   color: #ffffff8c;
  }
