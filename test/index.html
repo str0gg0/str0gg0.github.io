@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1">
+
+        <title>midnight_sun</title>
+
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        
+        <script src="jquery.min.js"></script>
+        <script src="script.js" defer></script>
+    </head>
+    <header>
+        <nav class="navbar">
+            <div class="brand-title">midnight_sun</div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#">/home</a></li>
+                    <li><a href="#">/blog</a></li>
+                    <li><a href="#">/dream_diary</a></li>
+                    <li><a href="#">/social▾</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <div class="content text-center">
+            <img class="logo" src="assets/logo.svg" style="margin-left: auto; margin-right: auto;"/>
+            <br>
+			<span terminal=1 class="terminal-line">
+				<h3>6155 0AE0 98FA 586F 4C8B<br>1D07 564B 4704 C246 569E</h3>
+			</span>
+            <div id="dump"></div>
+            <script>
+                $( "dump" ).load( "navbar.html" );
+            </script>
+        </div>
+    </body>
+    <footer>
+        <p>© violet <script>document.write( new Date().getFullYear() );</script></p>
+    </footer>
+</html>
