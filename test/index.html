@@ -11,6 +11,9 @@
         
         <script src="jquery.min.js"></script>
         <script src="script.js" defer></script>
+
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     </head>
     <header>
         <nav class="navbar">
@@ -22,10 +25,21 @@
             </a>
             <div class="navbar-links">
                 <ul>
-                    <li><a href="#">/home</a></li>
-                    <li><a href="#">/blog</a></li>
-                    <li><a href="#">/dream_diary</a></li>
-                    <li><a href="#">/social▾</a></li>
+                    <li><a href="/index.html">/home</a></li>
+                    <li><a href="/blog/index.html">/blog</a></li>
+                    <li><a href="/dreams/index.html">/dream_diary</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">/social▾</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="https://cohost.org/stroggo">/cohost!</a>
+                                <a href="https://bsky.app/profile/stroggo.bsky.social">/bluesky</a>
+                                <a href="https://mastodon.nz/@stroggo">/mastodon</a>
+                                <a href="https://twitter.com/stroggo">/hellbird</a>
+                                <a href="https://keyserver.ubuntu.com/pks/lookup?search=stroggo&op=vindex">/pgp</a>
+                            </div>
+                        </div> 
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -35,12 +49,8 @@
             <img class="logo" src="assets/logo.svg" style="margin-left: auto; margin-right: auto;"/>
             <br>
 			<span terminal=1 class="terminal-line">
-				<h3>6155 0AE0 98FA 586F 4C8B<br>1D07 564B 4704 C246 569E</h3>
+				<h2>6155 0AE0 98FA 586F 4C8B<br>1D07 564B 4704 C246 569E</h2>
 			</span>
-            <div id="dump"></div>
-            <script>
-                $( "dump" ).load( "navbar.html" );
-            </script>
         </div>
     </body>
     <footer>
