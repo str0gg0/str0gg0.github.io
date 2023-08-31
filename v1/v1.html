@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- MIDNIGHT_SUN v1.2 archived for prosperity -->
+<html>
+<head>
+	<!-- STYLE SHEET -->
+	<style>
+	body { 
+		background-color: #1a1a1a; 
+	}
+	
+	p {
+		font-family: 'Share Tech Mono', Monospace, Courier;
+        font-size: 26px;
+		font-weight: 400;
+        color: rgba(255,255,255,0.9);
+		padding: 0;
+		margin: 0;
+		font-color: white;
+	}
+	
+	.logo {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 25px;
+		width: 25%;
+	}
+	
+	
+	#fingerprint {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
+		text-align: center;
+		width: 30%;
+		clear: left;
+		padding 10px;
+	}
+	
+	#nav {
+		width: 50%;
+		margin: auto;
+	}
+	
+	#nav .point {
+		float: left; 
+		width: 15%;
+		margin-left: 20%;
+		list-style-type: none;
+	}
+	
+	#nav .icon {
+		width: 100%;	
+	}
+	
+
+	</style>
+	
+	<title>MIDNIGHT_SUN_v1</title>
+</head>
+
+<body>
+
+<!--
+==================================================================
+              _     __      _       __    __                      
+   ____ ___  (_)___/ /___  (_)___ _/ /_  / /_     _______  ______ 
+  / __ `__ \/ / __  / __ \/ / __ `/ __ \/ __/    / ___/ / / / __ \
+ / / / / / / / /_/ / / / / / /_/ / / / / /_     (__  ) /_/ / / / /
+/_/ /_/ /_/_/\__,_/_/ /_/_/\__, /_/ /_/\__/____/____/\__,_/_/ /_/ 
+                          /____/         /_____/                  
+==================================================================
+-->
+
+	<!-- BODY SECTION -->
+	
+	<div id="wrapper">
+		
+		<img class="logo" src="/v1/assets/logo.svg" />
+		
+		<div id="nav">
+			<ul>
+				<li class="point">
+					<a href="https://keyserver.ubuntu.com/pks/lookup?search=stroggo&op=vindex">
+						<img class="icon" src="/v1/assets/pubkey.svg">
+					</a>
+				</li>
+				<li class="point">
+					<a href="https://twitter.com/stroggo">
+						<img class="icon" src="/v1/assets/twitter.svg">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<br>
+		<div id="fingerprint">
+			<span terminal=1 class="terminal-line">
+				<p>6155 0AE0 98FA 586F 4C8B<br>1D07 564B 4704 C246 569E</p>
+			</span>
+		</div>
+	</div>	
+
+
+		<script>
+			// TERMINAL TYPING CODE BY STEVE DEKORTE
+			function getAllElementsWithAttribute(attribute) {
+				var matchingElements = [];
+				var allElements = document.getElementsByTagName('span');
+				for (var i = 0, n = allElements.length; i < n; i++) {
+					if (allElements[i].getAttribute(attribute)) {
+						matchingElements.push(allElements[i]);
+					}
+				}
+				return matchingElements;
+			}
+			var terminalElements = getAllElementsWithAttribute("terminal");
+			function terminals_init() {
+				var elements = terminalElements;
+				for (var i = 0; i < elements.length; i++) {
+					var e = elements[i]
+					e.completeHTML = e.innerHTML
+					e.innerHTML = ""
+					e.i = 0
+				}
+			}
+			function terminals_start() {
+			//terminalIntervalFunction = function(){ terminals_next() }
+			//setInterval(terminalIntervalFunction, 1000/60);
+			terminals_next()
+			}
+			function terminals_next() {
+				var done = true
+				var elements = terminalElements;
+				for (var i = 0; i < elements.length && done == true; i++) {
+					var e = elements[i]
+					e.i ++
+					if (e.innerHTML.length >= e.completeHTML.length) {
+						e.innerHTML = e.completeHTML
+					} else {
+						var s =  e.completeHTML.substring(0, e.i) 
+						if (s.slice(-1) == " ") {
+							if(e.innerHTML.length % 6 == 0 ) { s = s + "" } else { s = s + "|" }
+						} else {
+							s = s + "|"
+						}
+						e.innerHTML = s
+						e.parentNode.style.display = 'none'
+						e.parentNode.style.display = 'block'
+						done = false
+					}
+				}
+				if (!done) {
+				//window.clearInterval(terminalIntervalFunction)
+				setTimeout(terminals_next, 800/20)
+				}
+			}
+			terminals_init()
+			window.onload = function() { terminals_start() };
+		</script>
+		
+</body>
+</html>
