@@ -101,6 +101,9 @@ a:hover {
 .text-center {
     text-align: center;
 }
+.mono {
+    font-family: var(--font-monospace);
+}
 .dropbtn {
     background-color: var(--bg-color);
     color: var(--fg-color);

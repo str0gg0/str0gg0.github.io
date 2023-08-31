@@ -16,10 +16,33 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     </head>
     <header>
-        <nav class="navbar" id="navbar-contents"></nav>
-        <script>
-            $( "#navbar-contents" ).load( "/navbar.html" );
-        </script>
+        <nav class="navbar" id="navbar-contents">
+            <div class="brand-title">midnight_sun</div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="/index.html">/home</a></li>
+                    <li><a href="/blog/index.html">/blog</a></li>
+                    <li><a href="/dreams/index.html">/dream_diary</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">/social▾</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="https://cohost.org/stroggo">/cohost!</a>
+                                <a href="https://bsky.app/profile/stroggo.bsky.social">/bluesky</a>
+                                <a href="https://mastodon.nz/@stroggo">/mastodon</a>
+                                <a href="https://twitter.com/stroggo">/hellbird</a>
+                                <a href="https://keyserver.ubuntu.com/pks/lookup?search=stroggo&op=vindex">/pgp</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <body>
         <div class="content">
