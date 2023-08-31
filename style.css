@@ -39,6 +39,9 @@ a {
     text-decoration: none;
     color: var(--fg-color);
 }
+a:hover {
+    color: var(--hover-color);
+}
 
 .navbar {
     display: flex;
@@ -67,8 +70,6 @@ a {
 }
 .navbar-links li a {
     display: block;
-    text-decoration: none;
-    color: var(--fg-color);
     padding: 1rem;
 }
 .navbar-links a:hover {
