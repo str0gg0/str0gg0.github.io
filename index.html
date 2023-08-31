@@ -1,93 +1,61 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, inital-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
 
-        <title>midnight_sun</title>
+    <title>midnight_sun</title>
 
-        <link rel="stylesheet" href="/reset.css">
-        <link rel="stylesheet" href="/style.css">
-        
-        <script src="/jquery.min.js"></script>
-        <script src="/script.js"></script>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
 
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    </head>
-    <header>
-        <nav class="navbar" id="navbar-contents"></nav>
-        <script>
-            $( "#navbar-contents" ).load( "/navbar.html" );
-        </script>
-    </header>
-    <body>
-        <div class="content text-center">
-            <img class="logo" src="/assets/logo.svg" style="margin-left: auto; margin-right: auto;"/>
-            <br>
-			<span terminal=1 class="terminal-line">
-				<h2>6155 0AE0 98FA 586F 4C8B<br>1D07 564B 4704 C246 569E</h2>
-			</span>
-            <script>
-                // Terminal typing code by Steve Dekorte
-                function getAllElementsWithAttribute(attribute) {
-                    var matchingElements = [];
-                    var allElements = document.getElementsByTagName('span');
-                    for (var i = 0, n = allElements.length; i < n; i++) {
-                        if (allElements[i].getAttribute(attribute)) {
-                            matchingElements.push(allElements[i]);
-                        }
-                    }
-                    return matchingElements;
-                }
-                var terminalElements = getAllElementsWithAttribute("terminal");
-                function terminals_init() {
+    <script src="/script.js"></script>
 
-                    var elements = terminalElements;
-                    for (var i = 0; i < elements.length; i++) {
-                        var e = elements[i]
-                        e.completeHTML = e.innerHTML
-                        e.innerHTML = ""
-                        e.i = 0
-                    }
-                }
-                function terminals_start() {
-                    //terminalIntervalFunction = function(){ terminals_next() }
-                    //setInterval(terminalIntervalFunction, 1000/60);
-                    terminals_next()
-                }
-                function terminals_next() {
-                    var done = true
-                    var elements = terminalElements;
-                    for (var i = 0; i < elements.length && done == true; i++) {
-                        var e = elements[i]
-                        e.i ++
-                        if (e.innerHTML.length >= e.completeHTML.length) {
-                            e.innerHTML = e.completeHTML
-                        } else {
-                            var s =  e.completeHTML.substring(0, e.i) 
-                            if (s.slice(-1) == " ") {
-                                if(e.innerHTML.length % 6 == 0 ) { s = s + "" } else { s = s + "|" }
-                            } else {
-                                s = s + "|"
-                            }
-                            e.innerHTML = s
-                            e.parentNode.style.display = 'none'
-                            e.parentNode.style.display = 'block'
-                            done = false
-                        }
-                    }
-                    if (!done) {
-                        //window.clearInterval(terminalIntervalFunction)
-                        setTimeout(terminals_next, 800/20)
-                    }
-                }
-                terminals_init()
-                window.onload = function() { terminals_start() };
-            </script>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+</head>
+<header>
+    <nav class="navbar" id="navbar-contents">
+        <div class="brand-title">midnight_sun</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="/index.html">/home</a></li>
+                <li><a href="/blog/index.html">/blog</a></li>
+                <li><a href="/dreams/index.html">/dream_diary</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">/social▾</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="https://cohost.org/stroggo">/cohost!</a>
+                            <a href="https://bsky.app/profile/stroggo.bsky.social">/bluesky</a>
+                            <a href="https://mastodon.nz/@stroggo">/mastodon</a>
+                            <a href="https://twitter.com/stroggo">/hellbird</a>
+                            <a href="https://keyserver.ubuntu.com/pks/lookup?search=stroggo&op=vindex">/pgp</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </body>
-    <footer>
-        <p>© violet <script>document.write( new Date().getFullYear() );</script></p>
-    </footer>
+    </nav>
+</header>
+<body>
+    <div class="content text-center">
+        <img class="logo" src="/assets/logo.svg" style="margin-left: auto; margin-right: auto;" />
+        <br>
+        <span terminal=1 class="terminal-line">
+            <h2>6155 0AE0 98FA 586F 4C8B<br>1D07 564B 4704 C246 569E</h2>
+        </span>
+    </div>
+</body>
+<footer>
+    <p>© violet
+        <script>document.write(new Date().getFullYear());</script>
+    </p>
+</footer>
+
 </html>
