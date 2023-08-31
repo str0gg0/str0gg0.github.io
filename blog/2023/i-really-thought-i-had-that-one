@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1">
+
+        <title>I Really Thought I Had That One...</title>
+
+        <link rel="stylesheet" href="/reset.css">
+        <link rel="stylesheet" href="/style.css">
+        
+        <script src="/jquery.min.js"></script>
+        <script src="/script.js"></script>
+
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    </head>
+    <header>
+        <nav class="navbar" id="navbar-contents"></nav>
+        <script>
+            $( "#navbar-contents" ).load( "/navbar.html" );
+        </script>
+    </header>
+    <body>
+        <div class="content">
+            <p class="date">2023-07-27 · Violet</p>
+            <h2>I Really Thought I Had That One...</h2>
+            <p>Rejection hurts, and the closer you were to something the greater the pain will be. Life coaches and motivational speakers often wax lyrically about failure, and how it is a healthy sign of development, an essential part of life itself, but very few if any even touch the subject of rejection.</p>
+            <p>We can all see why, failure is logical, it can be observed, studied, and rationalized. Those folks with the freshly pressed shirts and $200 haircuts are right in its an a essential part of starting and learning anything. You should always expect a degree of failure when embarking on any task.. it's nothing to be afraid of.</p>
+            <p>Rejection on the other hand is nothing short of a kick in the teeth, just like failure it can be expected, but no good comes from revisiting it, and at times it won't even make sense. For example, say you decided to sign up to a Gym with the goal of getting in shape! You go in on your first day and only get through half your exercises, you've failed, badly it seems but you're not upset. You're not upset because to a degree you expected it, and looking back at some of your sets you can see glaring mistakes and room for improvement. You've learned what not to do and can take that with you knowing you'll do better another time. Now imagine you sign up, but just before you get to the front door a staff member comes out and says you cant go in. The reason? You don't know, or you're not sure why, but they're turning you away. "You're a nice person and all and have the skills and motivation to get healthy, but I'm sorry.. you'll have to try somewhere else". What are you supposed to learn from that?</p>
+            <p>Nothing, and it'll hurt like hell.</p>
+            <p>Some people think this is because rejection is beyond your immediate control, others think its a mental holdover from when we were developing as a species the pain being an instinctual reminder to get with the program and conform. But regardless of its cause, it'll always be painful in a way failure isn't, and that kind of pain is hard to get rid of.</p>
+            <p>Last and most potently of all is the difference in their cumulative effects. Repeated failure simply amplifies what it was telling you before, this didn't work try again. It often forces you to dramatically change your approach to a goal, or shift and put your energy into something more achievable. Repeated rejection tends the opposite, it chips away at you, bogs you down, makes you feel worthless across the board and start questioning yourself. If everyone is giving you a pass there must be some ugly part, sub-par part of yourself that you just don't see.</p>
+            <p>Now why am I saying all of this? Three months ago I handed in my notice with the intention of fixing my body, and starting a career in something more pleasant. Every single application I have sent out has been rejected without interview, slowly chipping away. Until two weeks ago, an interview, meet the team, a followup questionnaire, and a second interview this was it!</p>
+            <p>"You're a strong contender, and we don't have any feedback for improvements but I'm sorry.. you'll have to try somewhere else."</p>
+        </div>
+    </body>
+    <footer>
+        <p>© violet <script>document.write( new Date().getFullYear() );</script></p>
+    </footer>
+</html>

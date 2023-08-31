@@ -125,7 +125,12 @@ body h1, h2, h3 {
 }
 .show {
     display:block;
-} 
+}
+.date {
+    font-family: var(--font-monospace);
+    font-size: 0.5rem;
+    margin: none;
+}
 
 @media (max-width: 800px) {
     .navbar {
