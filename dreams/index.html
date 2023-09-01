@@ -1,53 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, inital-scale=1">
-
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
         <title>/dream_diary</title>
-
-        <link rel="stylesheet" href="/reset.css">
-        <link rel="stylesheet" href="/style.css">
-        
-        <script src="/script.js" defer></script>
-
+        <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/css/styles.css" rel="stylesheet" />
+        <!-- Custom CSS for glitch effect-->
+        <style>
+            .stack {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .stack span {
+                font-weight: bold;
+                grid-row-start: 1;
+                grid-column-start: 1;
+                font-size: 4rem;
+                --stack-height: calc(100% / var(--stacks) - 1px);
+                --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+                --clip-top: calc(var(--stack-height) * var(--index));
+                --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+                clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+                animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
+            }
+
+            .stack span:nth-child(odd) { --glitch-translate: 8px; }
+            .stack span:nth-child(even) { --glitch-translate: -8px; }
+
+            @keyframes glitch {
+            0% {
+                text-shadow: -2px 3px 0 white, 2px -3px 0 white;
+                transform: translate(var(--glitch-translate));
+            }
+            2% {text-shadow: 2px -3px 0 white, -2px 3px 0 white;}
+            4%, 100% {  text-shadow: none; transform: none; }
+            }
+        </style>
+         <!-- Bootstrap core JS-->
+         <script src="/js/bootstrap.bundle.min.js"></script>
+         <!-- Core theme JS-->
+         <script src="/js/scripts.js"></script>
+         <!-- jQuery JS-->
+        <script src="/js/jquery.min.js"></script>
     </head>
-    <header>
-        <nav class="navbar" id="navbar-contents">
-            <div class="brand-title">midnight_sun</div>
-            <a href="" class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <div class="navbar-links">
-                <ul>
-                    <li><a href="/index.html">/home</a></li>
-                    <li><a href="/blog/index.html">/blog</a></li>
-                    <li><a href="/dreams/index.html">/dream_diary</a></li>
-                    <li>
-                        <div class="dropdown">
-                            <button onclick="myFunction()" class="dropbtn">/social▾</button>
-                            <div id="myDropdown" class="dropdown-content">
-                                <a href="https://cohost.org/stroggo">/cohost!</a>
-                                <a href="https://bsky.app/profile/stroggo.bsky.social">/bluesky</a>
-                                <a href="https://mastodon.nz/@stroggo">/mastodon</a>
-                                <a href="https://twitter.com/stroggo">/hellbird</a>
-                                <a href="https://keyserver.ubuntu.com/pks/lookup?search=stroggo&op=vindex">/pgp</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <body>
-        <div class="content text-center">
+<!--
+==================================================================
+              _     __      _       __    __                      
+   ____ ___  (_)___/ /___  (_)___ _/ /_  / /_     _______  ______ 
+  / __ `__ \/ / __  / __ \/ / __ `/ __ \/ __/    / ___/ / / / __ \
+ / / / / / / / /_/ / / / / / /_/ / / / / /_     (__  ) /_/ / / / /
+/_/ /_/ /_/_/\__,_/_/ /_/_/\__, /_/ /_/\__/____/____/\__,_/_/ /_/ 
+                          /____/         /_____/                  
+==================================================================
+-->
+    <body class="d-flex flex-column min-vh-100">
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar-contents"></nav>
+        <script>
+            $( "#navbar-contents" ).load( "/navbar.html" );
+        </script>
+        <!-- Page content-->
+        <div class="container">
+                <div class="stack  text-center" style="--stacks: 3;">
+                    <span style="--index: 0;"><h2 style="font-family: var(--bs-font-monospace);"></h2>Dream Diary</h2></span>
+                    <span style="--index: 1;"><h2 style="font-family: var(--bs-font-monospace);"></h2>Dream Diary</h2></span>
+                    <span style="--index: 2;"><h2 style="font-family: var(--bs-font-monospace);"></h2>Dream Diary</h2></span>
+                    <p style="color:#474747;">you found a way in, enjoy my dreams</p>
+                </div>
+				</span>
+                    <p><a href="/dreams/year_zero/the_beach.html" style="text-decoration: none;">> the beach</a></p>
         </div>
+        <footer class="text-center mt-auto">
+			<p>© Violet <script>document.write( new Date().getFullYear() );</script></p>
+		</footer>
     </body>
-    <footer>
-        <p>© violet <script>document.write( new Date().getFullYear() );</script></p>
-    </footer>
 </html>

@@ -35,13 +35,6 @@ body h1, h2, h3 {
     font-family: var(--font-sans-serif);
     font-weight: 400;
 }
-a {
-    text-decoration: none;
-    color: var(--fg-color);
-}
-a:hover {
-    color: var(--hover-color);
-}
 
 .navbar {
     display: flex;
@@ -70,6 +63,8 @@ a:hover {
 }
 .navbar-links li a {
     display: block;
+    text-decoration: none;
+    color: var(--fg-color);
     padding: 1rem;
 }
 .navbar-links a:hover {
@@ -93,16 +88,12 @@ a:hover {
 }
 .content {
     max-width: var(--content-width);
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 1.5rem;
 }
 .text-center {
     text-align: center;
-}
-.mono {
-    font-family: var(--font-monospace);
 }
 .dropbtn {
     background-color: var(--bg-color);
@@ -134,11 +125,7 @@ a:hover {
 }
 .show {
     display:block;
-}
-.date {
-    font-family: var(--font-monospace);
-    margin: none;
-}
+} 
 
 @media (max-width: 800px) {
     .navbar {
