@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
+    <title>midnight_sun</title>
+    <description>midnight_sun</description>
+    <link>/</link>
+    <item>
+  <title>New site, who this?</title>
+  <pubDate>Thu, 06 Mar 2025 00:00:00 GMT</pubDate>
+  <link>/blog/new-site-who-this.html</link>
+  <guid>/blog/new-site-who-this.html</guid>
+  <description>What do they say, fourth time's a charm?</description>
+</item><item>
+  <title>The Times They Are a Changing</title>
+  <pubDate>Fri, 10 Nov 2023 00:00:00 GMT</pubDate>
+  <link>/blog/the-times-they-are-a-changing.html</link>
+  <guid>/blog/the-times-they-are-a-changing.html</guid>
+  <description>back from an unintended hiatus...</description>
+</item><item>
+  <title>Interloping</title>
+  <pubDate>Tue, 02 Aug 2022 00:00:00 GMT</pubDate>
+  <link>/blog/interloping.html</link>
+  <guid>/blog/interloping.html</guid>
+  <description>When imposter syndrome is part of the job..</description>
+</item><item>
+  <title>RAM OK, ROM OK</title>
+  <pubDate>Mon, 18 Jul 2022 00:00:00 GMT</pubDate>
+  <link>/blog/ram-ok-rom-ok.html</link>
+  <guid>/blog/ram-ok-rom-ok.html</guid>
+  <description>It's time for a change of scenery..</description>
+</item>
+  </channel>
+</rss>
